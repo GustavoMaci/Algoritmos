@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 // Implementação do Insertion Sort
 void insertionSort(int arr[], int n)

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 // Função para trocar dois elementos
 void swap(int *a, int *b)
