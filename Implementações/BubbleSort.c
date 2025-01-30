@@ -46,7 +46,7 @@ void printArray(int arr[], int n)
 
 int main()
 {
-  int n = 10000; // Tamanho do array (você pode alterar para testar diferentes tamanhos)
+  int n = 100000; // Tamanho do array (você pode alterar para testar diferentes tamanhos)
   int arr[n];
 
   // Gerar array aleatório

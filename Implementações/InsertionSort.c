@@ -21,11 +21,11 @@ void insertionSort(int arr[], int n)
 }
 
 // Função para gerar dados aleatórios
-void generateRandomArray(int arr[], int n)
+void ArrayAleatorio(int arr[], int n)
 {
   for (int i = 0; i < n; i++)
   {
-    arr[i] = rand() % 10000; // Números entre 0 e 9999
+    arr[i] = rand() % 10000;
   }
 }
 
@@ -41,26 +41,26 @@ void printArray(int arr[], int n)
 
 int main()
 {
-  int n = 1000; // Tamanho do array (você pode alterar para testar diferentes tamanhos)
+  int n = 100000; // Tamanho do array (você pode alterar para testar diferentes tamanhos)
   int arr[n];
 
   // Gerar array aleatório
-  generateRandomArray(arr, n);
+  ArrayAleatorio(arr, n);
 
   printf("Array original:\n");
   printArray(arr, n);
 
   // Medir o tempo de execução
-  clock_t start, end;
-  start = clock();
+  clock_t inicio, fim;
+  inicio = clock();
   insertionSort(arr, n);
-  end = clock();
+  fim = clock();
 
   printf("Array ordenado:\n");
   printArray(arr, n);
 
-  double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
-  printf("Tempo de execucao: %f segundos\n", time_taken);
+  double tempo_gasto = ((double)(fim - inicio)) / CLOCKS_PER_SEC;
+  printf("Tempo de execucao: %f segundos\n", tempo_gasto);
 
   return 0;
 }
