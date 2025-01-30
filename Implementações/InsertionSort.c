@@ -41,7 +41,7 @@ void printArray(int arr[], int n)
 
 int main()
 {
-  int n = 100; // Tamanho do array (você pode alterar para testar diferentes tamanhos)
+  int n = 1000; // Tamanho do array (você pode alterar para testar diferentes tamanhos)
   int arr[n];
 
   // Gerar array aleatório
@@ -60,7 +60,7 @@ int main()
   printArray(arr, n);
 
   double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
-  printf("Tempo de execução: %f segundos\n", time_taken);
+  printf("Tempo de execucao: %f segundos\n", time_taken);
 
   return 0;
 }

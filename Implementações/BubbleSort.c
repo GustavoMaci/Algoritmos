@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 // Função para trocar dois elementos
-void swap(int *a, int *b)
+void troca(int *a, int *b)
 {
   int temp = *a;
   *a = *b;
@@ -19,18 +19,18 @@ void bubbleSort(int arr[], int n)
     {
       if (arr[j] > arr[j + 1])
       {
-        swap(&arr[j], &arr[j + 1]);
+        troca(&arr[j], &arr[j + 1]);
       }
     }
   }
 }
 
 // Função para gerar dados aleatórios
-void generateRandomArray(int arr[], int n)
+void ArrayAleatorio(int arr[], int n)
 {
   for (int i = 0; i < n; i++)
   {
-    arr[i] = rand() % 10000; // Números entre 0 e 9999
+    arr[i] = rand() % 10000;
   }
 }
 
@@ -50,7 +50,7 @@ int main()
   int arr[n];
 
   // Gerar array aleatório
-  generateRandomArray(arr, n);
+  ArrayAleatorio(arr, n);
 
   printf("Array original:\n");
   printArray(arr, n);

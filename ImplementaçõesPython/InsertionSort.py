@@ -17,7 +17,7 @@ def generate_random_array(n, max_value=10000):
 
 # Main
 if __name__ == "__main__":
-    n = 100  # Tamanho do array (mude para testar diferentes tamanhos)
+    n = 1000000  # Tamanho do array (mude para testar diferentes tamanhos)
     arr = generate_random_array(n)
 
     print("Array original:")
