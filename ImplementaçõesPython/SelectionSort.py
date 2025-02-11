@@ -17,7 +17,7 @@ any_numbers = random.choices(range(1, 10000), k=1000000)
 
 print("Números desordenados:", any_numbers)
 
-print("#" * 150)
+print("\n") 
 
 # Medir o tempo de execução
 inicio_tempo = time.time()
