@@ -26,43 +26,49 @@ void selection_sort(int lista[], int n)
 
 int main()
 {
-  int n = 1000000;
+  int n = 1000000; // Tamanho do array
   int *any_numbers = malloc(n * sizeof(int));
   int *ordenado = malloc(n * sizeof(int));
   srand(time(NULL));
 
+  // Preenche o array com números aleatórios entre 0 e 9999
   for (int i = 0; i < n; i++)
   {
     any_numbers[i] = rand() % 10000;
   }
 
-  printf("Números desordenados: ");
-  for (int i = 0; i < 10; i++)
+  // Exibe todos os números desordenados
+  printf("Numeros desordenados:\n");
+  for (int i = 0; i < n; i++)
   {
     printf("%d ", any_numbers[i]);
   }
-  printf("\n");
+  printf("\n\n");
 
-  printf("\n"); // Substituição por uma quebra de linha
-
-  clock_t inicio_tempo = clock();
+  // Copia os números para o array "ordenado"
   for (int i = 0; i < n; i++)
   {
     ordenado[i] = any_numbers[i];
   }
-  selection_sort(ordenado, n);
+
+  // Mede o tempo de execução
+  clock_t inicio_tempo = clock();
+  selection_sort(ordenado, n); // Ordena o array
   clock_t fim_tempo = clock();
 
-  printf("Números ordenados: ");
-  for (int i = 0; i < 10; i++)
+  // Exibe todos os números ordenados
+  printf("Numeros ordenados:\n");
+  for (int i = 0; i < n; i++)
   {
     printf("%d ", ordenado[i]);
   }
   printf("\n");
 
+  // Calcula e exibe o tempo de execução
   double tempo_execucao = (double)(fim_tempo - inicio_tempo) / CLOCKS_PER_SEC;
-  printf("Tempo de execução: %.6f segundos\n", tempo_execucao);
+  printf("\nTempo de execucao: %.6f segundos\n", tempo_execucao);
 
+  // Libera a memória alocada
   free(any_numbers);
   free(ordenado);
   return 0;
